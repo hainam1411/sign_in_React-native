@@ -1,13 +1,20 @@
-import {View, Text, FlatList, Image} from 'react-native'
-import React from 'react'
+import {View, Text, FlatList, Image, RefreshControl} from 'react-native'
+import React, {useState} from 'react'
 import {SafeAreaView} from "react-native-safe-area-context";
 import {images} from "../../constants";
 import SearchInput from "../../components/SearchInput";
 import Trending from "../../components/Trending";
 import EmptyState from "../../components/EmptyState";
+import {Link} from "expo-router";
 
 const Home = () => {
-    return (<SafeAreaView className="bg-primary">
+    const [refreshing, setRefreshing] = useState(false)
+    const onRefresh = async () => {
+        setRefreshing(true);
+        //refresh page if have a new video
+        setRefreshing(false)
+    }
+    return (<SafeAreaView className="bg-primary h-full">
             <FlatList data={[]}
                 //data={[{id: 1}, {id: 2}, {id: 3}]}
                       keyExtractor={(item) => item.$id}
@@ -43,7 +50,10 @@ const Home = () => {
                           <EmptyState title="No videos found"
                                        subtitle="No videos created yet"/>
                           )}
+
+                      refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh}/>}
             />
+        <Link href="/sign-up" className="text-orange-400 font-psemibold text-lg ml-1">Sign up</Link>
 
 
         </SafeAreaView>)
