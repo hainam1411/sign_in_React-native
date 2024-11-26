@@ -2,15 +2,15 @@ import { FlatList, Image, Text, TouchableOpacity, View } from 'react-native';
 import React, { useState } from 'react';
 import { SafeAreaView } from "react-native-safe-area-context";
 import { icons } from "../../constants";
-import { Link } from "expo-router";
 import Category from "../../components/category";
+import Promo from "../../components/promo";
 
 const categories = ["Uu dai", "Lich su"];
 const Profile = () => {
     const [selectedCategory, setSelectedCategory] = useState(null);
 
     return (
-        <SafeAreaView className="flex-1 bg-[#FFEFE0]">
+        <SafeAreaView className=" bg-[#FFEFE0]">
             <View className="relative flex-row items-center justify-between px-8 pb-10 pt-16">
                 <TouchableOpacity href="/home" className="w-10 h-10 items-center">
                     <Image source={icons.leftArrow} className="w-10 h-10" resizeMode='center' />
@@ -46,6 +46,16 @@ const Profile = () => {
                     contentContainerStyle={{ justifyContent: 'space-evenly', flexGrow: 1 }}
                     style={{ width: '100%' }}
                 />
+            </View>
+
+            <View className="flex-row justify-between">
+                <Promo/>
+                <Promo/>
+            </View>
+
+            <View className="flex-row justify-between">
+                <Promo/>
+                <Promo/>
             </View>
         </SafeAreaView>
     );
