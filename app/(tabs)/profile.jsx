@@ -48,7 +48,7 @@ const Profile = () => {
                 />
             </View>
 
-            <View className="flex-row justify-between">
+            <View className="flex-row justify-between py-4">
                 <Promo/>
                 <Promo/>
             </View>
