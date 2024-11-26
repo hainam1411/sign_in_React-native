@@ -11,8 +11,8 @@ const Profile = () => {
 
     return (
         <SafeAreaView className=" bg-[#FFEFE0]">
-            <View className="relative flex-row items-center justify-between px-8 pb-10 pt-16">
-                <TouchableOpacity href="/home" className="w-10 h-10 items-center">
+            <View className="relative flex-col items-center justify-between px-8 pb-10 pt-16">
+                <TouchableOpacity href="/home" className=" absolute w-10 h-10 items-center">
                     <Image source={icons.leftArrow} className="w-10 h-10" resizeMode='center' />
                 </TouchableOpacity>
                 <View>
