@@ -4,11 +4,11 @@ import { images } from "../constants";
 
 const Promo = () => {
     return (
-        <View className="flex-1 p-4 ">
-            <Image source={images.coupon} className="rounded-2xl my-1 mr-1 w-full  mb-4" />
-            <View className="px-1.5">
-                <Text className="text-2xl text-primary font-pmedium mb-2">Uu dai 100k</Text>
-                <Text className="text-xl text-primary font-pregular">1000 diem</Text>
+        <View className="bg-white rounded-2xl shadow-lg flex-1 mx-2 overflow-hidden">
+            <Image source={images.coupon} className="w-full h-40" />
+            <View className="p-4">
+                <Text className="text-2xl font-bold text-[#DF7B64] mb-2">Ưu đãi 100K</Text>
+                <Text className="text-lg text-[#858587]">1000 điểm</Text>
             </View>
         </View>
     );

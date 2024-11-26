@@ -5,18 +5,18 @@ import { icons } from "../../constants";
 import Category from "../../components/category";
 import Promo from "../../components/promo";
 
-const categories = ["Uu dai", "Lich su"];
+const categories = ["Ưu đãi", "Lịch sử"];
 const Profile = () => {
     const [selectedCategory, setSelectedCategory] = useState(null);
 
     return (
         <SafeAreaView className=" bg-[#FFEFE0]">
-            <View className="relative flex-col items-center justify-between px-8 pb-10 pt-16">
-                <TouchableOpacity href="/home" className=" absolute w-10 h-10 items-center">
+            <View className="relative flex-row items-center justify-between px-8 pb-10 pt-16">
+                <TouchableOpacity href="/home" className=" w-10 h-10 items-center">
                     <Image source={icons.leftArrow} className="w-10 h-10" resizeMode='center' />
                 </TouchableOpacity>
-                <View>
-                    <Text className="font-psemibold text-2xl">Điểm thưởng</Text>
+                <View className="absolute left-1/2 transform -translate-x-1/2">
+                    <Text className=" font-psemibold text-2xl">Điểm thưởng</Text>
                 </View>
             </View>
 
@@ -53,7 +53,7 @@ const Profile = () => {
                 <Promo/>
             </View>
 
-            <View className="flex-row justify-between">
+            <View className="flex-row justify-between bg-gray-100 item items-center">
                 <Promo/>
                 <Promo/>
             </View>
