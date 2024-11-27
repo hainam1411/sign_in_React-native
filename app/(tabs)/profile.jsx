@@ -4,12 +4,14 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { icons } from "../../constants";
 import Category from "../../components/category";
 import Promo from "../../components/promo";
+import {LinearGradient} from "expo-linear-gradient";
 
 const categories = ["Ưu đãi", "Lịch sử"];
 const Profile = () => {
     const [selectedCategory, setSelectedCategory] = useState(null);
 
     return (
+
         <SafeAreaView className=" bg-[#FFEFE0]">
             <View className="relative flex-row items-center justify-between px-8 pb-10 pt-16">
                 <TouchableOpacity href="/home" className=" w-10 h-10 items-center">
@@ -30,22 +32,9 @@ const Profile = () => {
                 </View>
             </View>
 
-            <View className="items-center">
-                <FlatList
-                    data={categories}
-                    renderItem={({ item }) => (
-                        <Category
-                            item={item}
-                            selectedCategory={selectedCategory}
-                            setSelectedCategory={setSelectedCategory}
-                        />
-                    )}
-                    keyExtractor={(item) => item}
-                    horizontal={true}
-                    showsHorizontalScrollIndicator={false}
-                    contentContainerStyle={{ justifyContent: 'space-evenly', flexGrow: 1 }}
-                    style={{ width: '100%' }}
-                />
+            <View className="flex-row justify-evenly py-3">
+                <Category item="Ưu đãi" selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
+                <Category item="Lịch sử" selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
             </View>
 
             <View className="flex-row justify-between py-4">
@@ -53,11 +42,12 @@ const Profile = () => {
                 <Promo/>
             </View>
 
-            <View className="flex-row justify-between bg-gray-100 item items-center">
+            <View className="flex-row justify-between bg-gray-100 item items-center py-3">
                 <Promo/>
                 <Promo/>
             </View>
         </SafeAreaView>
+
     );
 };
 

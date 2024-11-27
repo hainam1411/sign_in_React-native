@@ -1,4 +1,4 @@
-const promo =[
+const promos =[
     {
         id: 1,
         name: 'Ưu đãi 10k',
