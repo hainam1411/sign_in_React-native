@@ -8,7 +8,7 @@ const Promo = ({title, points}) => {
             <Image source={images.coupon} className="w-full h-24" />
             <View className="p-4">
                 <Text className="text-2xl font-bold text-[#DF7B64] mb-2">{title}</Text>
-                <Text className="text-lg text-[#858587]">{points} điểm</Text>
+                <Text className="text-lg text-[#858587]">{points} </Text>
             </View>
         </View>
     );
