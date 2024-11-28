@@ -1,22 +1,22 @@
 export const used = [
     {
         id: 1,
-        name: 'Sử dụng ưu đãi 10k',
+        name: ' Ưu đãi 10k',
         date: '2024-11-25',
     },
     {
         id: 2,
-        name: 'Sử dụng ưu đãi 20k',
+        name: ' Ưu đãi 50k',
         date: '2024-11-20',
     },
     {
         id: 3,
-        name: 'Sử dụng ưu đãi 30k',
+        name: 'Ưu đãi 100k',
         date: '2024-11-18',
     },
     {
         id: 4,
-        name: 'Sử dụng ưu đãi 15k',
+        name: 'Ưu đãi 150k',
         date: '2024-11-10',
     },
 ];

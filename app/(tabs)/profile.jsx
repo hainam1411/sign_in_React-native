@@ -8,10 +8,10 @@ import { promos } from "../../constants/promos";
 import { used } from "../../constants/used";
 import History from "../../components/history";
 import { LinearGradient } from "expo-linear-gradient";
-import { useNavigation } from '@react-navigation/native'; // Import useNavigation
+import { useNavigation } from '@react-navigation/native';
 
 const Profile = () => {
-    const navigation = useNavigation(); // Khai báo hook useNavigation
+    const navigation = useNavigation();
     const [selectedCategory, setSelectedCategory] = useState("Ưu đãi");
 
     const data = {
@@ -24,10 +24,10 @@ const Profile = () => {
             <LinearGradient colors={['#FFEFE0', '#FFFFFF']}
                             style={{ flex: 1 }}>
                 <View className="relative flex-row items-center justify-between px-8 pb-10 pt-16">
-                    <TouchableOpacity onPress={() => navigation.navigate('home')} className="w-10 h-10">
-                        <Image source={icons.leftArrow} className="w-10 h-10" resizeMode="center" />
+                    <TouchableOpacity onPress={() => navigation.navigate('home')} className="w-14 h-14">
+                        <Image source={icons.leftArrow} className="w-14 h-14" resizeMode="center" />
                     </TouchableOpacity>
-                    <Text className="absolute left-1/2 transform -translate-x-1/2 font-psemibold text-2xl">Điểm thưởng</Text>
+                    <Text className="absolute left-[50%] transform -translate-x-1/2 translate-y-4 text-2xl font-semibold">Điểm thưởng</Text>
                 </View>
 
                 <View className="flex-row items-center bg-white mx-4 rounded-3xl py-1 px-4 shadow-lg mb-4 min-h-[90px]">
@@ -39,10 +39,10 @@ const Profile = () => {
                 </View>
 
                 <View className="flex-row justify-evenly py-3">
-                    <TouchableOpacity onPress={() => setSelectedCategory("Ưu đãi")}>
+                    <TouchableOpacity onPress={() => setSelectedCategory("Ưu đãi")} className="w-[48%]">
                         <Category item="Ưu đãi" selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
                     </TouchableOpacity>
-                    <TouchableOpacity onPress={() => setSelectedCategory("Lịch sử")}>
+                    <TouchableOpacity onPress={() => setSelectedCategory("Lịch sử")} className="w-[48%] ">
                         <Category item="Lịch sử" selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
                     </TouchableOpacity>
                 </View>
