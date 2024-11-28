@@ -22,7 +22,7 @@ const Profile = () => {
     return (
         <ScrollView className="flex-1">
             <LinearGradient colors={['#FFEFE0', '#FFFFFF']}
-                            style={{ flex: 1 }}>
+                           className="flex-1">
                 <View className="relative flex-row items-center justify-between px-8 pb-10 pt-16">
                     <TouchableOpacity onPress={() => navigation.navigate('home')} className="w-14 h-14">
                         <Image source={icons.leftArrow} className="w-14 h-14" resizeMode="center" />
